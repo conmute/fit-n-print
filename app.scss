@@ -1,0 +1,72 @@
+$w: 210mm;
+$h: 296mm;
+@mixin box-shadow() {
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+body .sheet {
+    margin: 0;
+    width: $w;
+    height: $h;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    page-break-after: always;
+    margin: 2em;
+    background-color: white;
+    @include box-shadow();
+}
+#limitter {
+    position: absolute;
+    visibility: hidden;
+}
+#root * {
+    box-sizing: border-box;
+}
+#content {
+    padding: 0.25in;
+}
+[chart] {
+    height: 3.5in;
+    border: 1px dashed #0085CA;
+    padding: 1px;
+}
+[chart].small {
+    height: 2.5in;
+}
+[chart].tall {
+    height: 4.5in;
+}
+.p {
+    clear: both;
+    margin: 0in 0in 0.3in 0in;
+}
+.hr {
+    clear: both;
+    margin: 0.2in 0in 0.2in 0in;
+}
+.row {
+    margin-bottom: 0.2in;
+}
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+.row:after {
+    clear: both;
+}
+.row:last-child {
+    margin-bottom: 0;
+}
+.column {
+    width: 50%;
+    padding: 0.1in;
+    float: left;
+}
