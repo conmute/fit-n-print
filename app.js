@@ -109,3 +109,7 @@ if (reduceHeightRatio < 1) {
         record.overlap.forEach((el) => adjustHeight(reduceHeightRatio, el, edges));
     });
 }
+
+if (window.location.pathname.includes("preview")) {
+    $(document.body).addClass("preview");
+}

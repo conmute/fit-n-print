@@ -10,6 +10,15 @@ html, body {
     margin: 0;
     background-color: whitesmoke;
 }
+body.preview {
+    background-color: white;
+    .sheet {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        margin: 0;
+    }
+}
 body .sheet {
     margin: 0;
     width: $w;
